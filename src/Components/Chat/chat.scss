@@ -1,0 +1,156 @@
+.chat {
+  padding: 0em 3em;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0px 6px 7px -2px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 6px 7px -2px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 6px 7px -2px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+
+  .userInfo {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding: 1em 0em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+
+    .avatar {
+      width: 110px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .userDetails {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 5px;
+
+      h3 {
+        font-size: 1.4rem;
+      }
+
+      span {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .messageContainer {
+    width: 100%;
+    height: 100%;
+    margin: 1.5em 0;
+    overflow: hidden;
+
+    .container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 3em;
+      padding: 0 1em;
+      overflow-y: scroll;
+      overscroll-behavior-y: contain;
+      scroll-snap-type: y proximity;
+
+      button {
+        background: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        color: #1a66ff;
+        font-size: 1rem;
+        font-weight: 500;
+      }
+    }
+
+    p {
+      display: block;
+      font-size: 1rem;
+      padding: 0.75em 1.75em;
+      border-radius: 8px;
+      position: relative;
+
+      span {
+        position: absolute;
+        display: block;
+        height: 0px;
+        width: 0px;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-radius: 8px;
+      }
+    }
+
+    p:last-child {
+      scroll-snap-align: end;
+    }
+
+    .time {
+      width: 100px;
+      font-size: 0.8rem;
+      color: rgba(0, 0, 0, 0.25);
+      font-weight: 600;
+      position: absolute;
+      bottom: -22px;
+    }
+
+    .msgReceived {
+      align-self: flex-end;
+      position: relative;
+
+      & > .time {
+        right: 0;
+      }
+    }
+
+    .msgSent {
+      align-self: flex-start;
+      position: relative;
+    }
+
+    .msgSent > p {
+      background: #1a66ff;
+      color: white;
+
+      span {
+        bottom: 0px;
+        left: -10px;
+        border-bottom: 20px solid #1a66ff;
+      }
+    }
+    .msgReceived > p {
+      background: #cfcfcf;
+      color: black;
+
+      span {
+        bottom: 0px;
+        right: -10px;
+        border-bottom: 20px solid #cfcfcf;
+      }
+    }
+  }
+
+  .inputField {
+    width: 100%;
+    padding: 1em 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.25);
+
+    input {
+      width: 100%;
+      background: #e0e0e0;
+      border: none;
+      outline: none;
+      padding: 0.45em 0.75em;
+      font-size: 1rem;
+      border-radius: 8px;
+    }
+  }
+}

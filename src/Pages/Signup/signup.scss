@@ -1,0 +1,158 @@
+.sign-up {
+  background: url("../../Images/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  form {
+    text-align: center;
+    position: relative;
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 400;
+      color: white;
+      margin-bottom: 30px;
+    }
+
+    .input-container {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      margin: 40px 0;
+      gap: 0px;
+      align-items: center;
+
+      label {
+        width: fit-content;
+        margin-right: auto;
+        margin-bottom: 5px;
+        color: white;
+        font-weight: 500;
+      }
+
+      .container {
+        position: relative;
+        width: 300px;
+
+        input {
+          border: 1px solid white;
+          outline: none;
+          width: 100%;
+          background: transparent;
+          border-radius: 4px;
+          padding: 1em;
+
+          color: white;
+          font-size: 0.9rem;
+          padding-left: 50px;
+          transition: all linear 0.5s;
+
+          &:focus {
+            border-color: rgb(69, 148, 69);
+          }
+
+          &::placeholder {
+            color: inherit;
+            opacity: 0.6;
+            font-weight: 300;
+          }
+        }
+
+        .icon {
+          position: absolute;
+          top: 50%;
+          left: 10px;
+          transform: translateY(-45%);
+
+          svg {
+            width: 100%;
+            transition: all linear 0.5s;
+            color: rgba(255, 255, 255, 0.8);
+          }
+        }
+      }
+
+      span {
+        position: absolute;
+        bottom: -21px;
+        font-size: 0.9rem;
+        color: rgba(187, 23, 23, 0.87);
+        padding-top: 0.5em;
+      }
+    }
+
+    .avatar {
+      border-radius: 50%;
+
+      label {
+        width: 120px;
+        aspect-ratio: 1;
+        background: url("../../Images/profile.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border: 1px solid white;
+        border-radius: 50%;
+        margin: 0 auto;
+        cursor: pointer;
+      }
+      input {
+        display: none;
+      }
+    }
+
+    button {
+      width: 300px;
+      padding: 0.8em;
+      background: white;
+      border-radius: 4px;
+      border: none;
+      color: #2148c0;
+      font-size: 1rem;
+      font-weight: 500;
+      margin-top: 10px;
+      cursor: pointer;
+      box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.75);
+      -webkit-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.75);
+      transition: all linear 0.2s;
+
+      &:active {
+        box-shadow: none;
+      }
+      &:disabled {
+        cursor: none;
+        opacity: 0.3;
+      }
+    }
+
+    a {
+      display: block;
+      color: white;
+      font-size: 1rem;
+      font-weight: 400;
+      margin-top: 15px;
+      width: fit-content;
+      margin-left: auto;
+
+      &:hover {
+        color: green;
+      }
+    }
+
+    h3 {
+      position: absolute;
+      left: 50%;
+      width: fit-content;
+      transform: translateX(-50%);
+      bottom: -40px;
+      font-size: 1.2rem;
+      color: rgba(187, 23, 23, 0.87);
+    }
+  }
+}

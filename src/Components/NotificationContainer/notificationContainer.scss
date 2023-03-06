@@ -1,0 +1,61 @@
+.notif-container {
+  grid-column: 2/5;
+  grid-row: 1/4;
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1em 2em;
+
+  .notif {
+    display: flex;
+    align-items: center;
+    padding: 0.75em 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.35);
+
+    .userInfo {
+      display: flex;
+      gap: 1em;
+      align-items: center;
+      span {
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: rgba(77, 77, 77, 0.75);
+        display: block;
+
+        &:first-child {
+          font-size: 1.25rem;
+          color: black;
+        }
+      }
+    }
+
+    .avatar {
+      width: 100px;
+      border-radius: 50%;
+      overflow: hidden;
+      aspect-ratio: 1;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    p {
+      margin: 0 2em;
+    }
+
+    button {
+      margin: 0 1.25em;
+      padding: 0.7em 1.75em;
+      background: #1a66ff;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  }
+}
